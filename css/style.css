@@ -1,0 +1,99 @@
+/* Body */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #E5EAEE;
+  font: 1.5em Arial, Helvetica, sans-serif;
+  color: #F4F4F4; }
+
+/* for other browsers */
+.headline, #subheadline, .column, footer, .button {
+  text-align: center; }
+
+/* top bar and Insurance span */
+.headline {
+  color: #E78244; }
+  .headline span {
+    font-weight: normal; }
+
+/* go back link */
+nav a {
+  text-decoration: none;
+  padding: 2ex 1.5ex;
+  margin-left: 5px; }
+
+nav a:hover {
+  text-decoration: underline; }
+
+/* div subheadline */
+#subheadline {
+  background-color: #38A18C;
+  padding-top: 8px; }
+  #subheadline h2 {
+    margin-bottom: 0px;
+    color: #2D4452; }
+
+/* main content */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #38A18C;
+  padding-top: 20px; }
+
+.column {
+  flex: 3 0px;
+  color: #F4F4F4;
+  max-width: 270px; }
+
+figure img {
+  width: 100%;
+  max-width: 250px; }
+
+/* style footer 1st and 2nd page */
+footer p {
+  color: #665;
+  margin-top: 45px; }
+
+/* style Button */
+.button {
+  margin: 30px 0px;
+  font-size: 25px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px;
+  width: 300px; }
+
+.button:hover {
+  background-color: #E78244; }
+
+/* Table design */
+td {
+  padding: 5px 10px; }
+
+/* Form */
+input, select {
+  font-size: 1.1em;
+  padding: 3px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  width: 300px; }
+
+/* Media Query */
+@media only screen and (max-width: 800px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%; } }
+@media only screen and (max-width: 600px) {
+  input, select, td, .button {
+    font-size: 0.7em;
+    width: 240px; } }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,108 @@
+/* Body */
+@import 'body'
+
+$orange: #E78244
+
+/* for other browsers */
+@mixin border-radius($radius)
+	-webkit-border-radius: $radius
+	-moz-border-radius: $radius
+	-ms-border-radius: $radius
+	border-radius: $radius
+
+%centerit
+	text-align: center
+
+/* top bar and Insurance span */
+.headline
+	color: $orange
+	@extend %centerit
+
+	span
+		font-weight: normal
+
+/* go back link */
+nav
+	a
+		text-decoration: none
+		padding: 2ex 1.5ex
+		margin-left: 5px
+
+nav a:hover
+		text-decoration: underline
+
+/* div subheadline */
+#subheadline
+	background-color: #38A18C
+	padding-top: 8px
+	@extend %centerit
+
+	h2
+		margin-bottom: 0px
+		color: #2D4452
+
+/* main content */
+.container
+	display: flex
+	flex-direction: row
+	justify-content: center
+	background-color: #38A18C
+	padding-top: 20px
+
+.column
+	flex: 3 0px
+	color: $font-color
+	@extend %centerit
+	max-width: 270px
+
+figure
+	img
+		width: 100%
+		max-width: 250px
+
+/* style footer 1st and 2nd page*/
+footer
+	@extend %centerit
+
+	p
+		color: #665
+		margin-top: 45px
+
+/* style Button */
+.button
+	margin: 30px 0px
+	font-size: 25px
+	@include border-radius(10px)
+	cursor: pointer
+	padding: 5px
+	@extend %centerit
+	width: 300px
+
+.button:hover
+	background-color: $orange
+
+
+/* Table design */
+td
+	padding: 5px 10px
+
+/* Form */
+input, select
+	font-size: 1.1em
+	padding: 3px
+	@include border-radius(5px)
+	width: 300px
+
+/* Media Query */
+@media only screen and (max-width: 800px)
+	.container
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		max-width: 100%
+
+ 
+@media only screen and (max-width: 600px)
+	input, select,td,.button
+		font-size: 0.7em
+		width: 240px 

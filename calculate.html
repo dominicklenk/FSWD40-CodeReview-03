@@ -5,18 +5,85 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Calculate</title>
+    <link rel="icon" href="favicon32x32.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
 </head>
 
 <body>
-    <!-- Navbar and Logo-->
+    <!--top bar and go back to first page -->
     <header id="header">
-        <div class="headline">
-            <h1>Insurance Company</h1>
-        </div>
+        <h1 class="headline"><span>Insurance</span> Company</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Go Back</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
+        <!-- container with form and table (form elements within)-->
+        <div class="container">
+            <form name="calculator">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Your Name:
+                            </td>
+                            <td>
+                                <input type="text" name="name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Age:
+                            </td>
+                            <td>
+                                <input type="text" name="age">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Country:
+                            </td>
+                            <td>
+                                <select name="country">
+                                    <option value="Austria">Austria</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="Italy">Italy</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Horsepower:
+                            </td>
+                            <td>
+                                <input type="text" name="horsepower">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td>
+                                <button id="calc" type="button" class="button">calculate</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
     </main>
+    <footer>
+        <!--present the output at this <p> -->
+        <p id="result">printed calculation goes here</p>
+    </footer>
 </body>
 <script src="js/script.js" type="text/javascript"></script>
+<script>
+// EventListener click -> button
+var elementNode = document.getElementById('calc');
+elementNode.addEventListener('click', calculateInsurance);
+</script>
+
 </html>
